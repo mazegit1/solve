@@ -17,45 +17,41 @@ const Footer = () => {
       >
         <motion.div
           className="card flex flex-col gap-2 text-xl md:text-2xl text-gray-600"
-          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
           <h1 className='text-black text-3xl md:text-4xl'>Solve</h1>
-          <a href="/">HOME</a>
-          <a href="/">ROOMS</a>
-          <a href="/">JOURNAL</a>
-          <a href="/">CONTACT</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>HOME</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>ROOMS</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>JOURNAL</a>
+          <a href="contact" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>CONTACT</a>
         </motion.div>
         <motion.div
           className="card flex flex-col gap-2 text-xl md:text-2xl text-gray-600"
-          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
           <h1 className='text-black text-3xl md:text-4xl'>Shop</h1>
-          <a href="/">Home</a>
-          <a href="/">Rooms</a>
-          <a href="/">LOOKBOOK</a>
-          <a href="/">FAQ</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Home</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Rooms</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>LOOKBOOK</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>FAQ</a>
         </motion.div>
         <motion.div
           className="card flex flex-col gap-2 text-xl md:text-2xl text-gray-600"
-          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
           <h1 className='text-black text-3xl md:text-4xl'>WebFlow</h1>
-          <a href="/">StyleGuide</a>
-          <a href="/">Licensing</a>
-          <a href="/">Changelog</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>StyleGuide</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Licensing</a>
+          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Changelog</a>
         </motion.div>
         <motion.div
           className="card flex flex-col gap-2 text-xl md:text-2xl text-gray-600"
-          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
           <h1 className='text-black text-3xl md:text-4xl'>Social</h1>
-          <a href="/">Instagram</a>
-          <a href="/">Github</a>
-          <a href="/">Telegram</a>
+          <a href="https://www.instagram.com/xelil_ovw/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Instagram</a>
+          <a href="https://github.com/mazegit1" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Github</a>
+          <a href="https://t.me/mazegit" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Telegram</a>
         </motion.div>
       </motion.div>
       <motion.div
@@ -64,7 +60,7 @@ const Footer = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1 className='text-xl md:text-2xl lg:text-3xl'>© 2022 Made by Pawel Gola. Powered by Webflow.</h1>
+        <h1 className='text-xl md:text-2xl lg:text-3xl'>© 2024 Made by Huseyn Khalil. Powered by JetAcademy.</h1>
       </motion.div>
     </motion.div>
   );
