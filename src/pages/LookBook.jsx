@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import lookbook from '../images/lookbook.png';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const LookBook = () => {
   return (

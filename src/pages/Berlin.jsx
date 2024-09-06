@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import berlin from '../images/berlin.png';
 import berlin2 from '../images/berlin2.png';
-
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 const Berlin = () => {
   const textVariants = {
     hidden: { opacity: 0, y: -50 },
