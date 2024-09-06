@@ -1,23 +1,37 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import enterimg from '../images/Enter.png';
 
 const Loading = () => {
   return (
-    <>
-      <div
-        className="loading flex items-center justify-center h-screen"
-        style={{
-          backgroundImage: `url(${enterimg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+    <div
+      className="loading bg-gradient-to-r from-[#ffb700] to-[#ff6f00] flex items-center justify-center h-screen relative overflow-hidden"
+    >
+      <motion.div
+        className="absolute inset-0 bg-black opacity-40"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+      />
+      <motion.a
+        href='home'
+        className="relative px-8 py-8 md:px-12 md:py-12 xl:text-8xl md:text-6xl text-4xl text-white border-4 border-white hover:text-[#ffb700] hover:border-[#ffb700] transition-all ease-in-out duration-300 hover:bg-black bg-transparent text-center rounded-full shadow-lg"
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.1, rotate: 5 }}
+        transition={{ duration: 0.3 }}
       >
-        <a href='home' className="px-12 py-12 border-black border bg-transparent  mt-[355px] text-center rounded-full">
-  
-        </a>
-      </div>
-    </>
+        PRESS TO ENTER
+      </motion.a>
+      <motion.div
+        className="absolute bottom-10 flex space-x-2"
+        animate={{ y: [0, 20, 0] }}
+        transition={{ duration: 1, repeat: Infinity }}
+      >
+        <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
+        <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
+        <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
+      </motion.div>
+    </div>
   );
 };
 
