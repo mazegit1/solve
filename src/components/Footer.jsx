@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   return (
     <motion.div
-      className="footer flex flex-col items-center px-4 py-8 text-start gap-14 border-t border-t-gray-500"
+      className="footer bg-[#e3e3e3] flex flex-col items-center px-4 py-8 text-start gap-14 border-t border-t-gray-500"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <motion.div
-        className="footer-top  uppercase flex  items-top justify-center  gap-12 lg:gap-24 items-start w-full"
+        className="footer-top  uppercase grid gap-56 md:grid-cols-3 grid-cols-2 grid-rows-2 justify-center  xl:grid-cols-3  items-center "
         initial={{ y: -20 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -35,15 +35,7 @@ const Footer = () => {
           <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>LOOKBOOK</a>
           <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>FAQ</a>
         </motion.div>
-        <motion.div
-          className="card flex flex-col gap-2 text-xl md:text-2xl text-gray-600"
-          transition={{ duration: 0.3 }}
-        >
-          <h1 className='text-black text-3xl md:text-4xl'>WebFlow</h1>
-          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>StyleGuide</a>
-          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Licensing</a>
-          <a href="/" className='hover:scale-105 transition-all ease-in-out duration-200 hover:underline hover:text-black'>Changelog</a>
-        </motion.div>
+
         <motion.div
           className="card flex flex-col gap-2 text-xl md:text-2xl text-gray-600"
           transition={{ duration: 0.3 }}
