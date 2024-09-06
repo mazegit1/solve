@@ -14,7 +14,7 @@ const Navbar = () => {
     <>
       <div className="header bg-transparent backdrop-blur-md py-8 justify-between fixed px-4 md:px-36 text-2xl md:text-4xl text-white font-light w-full items-center flex z-20">
         <div className="header-left">
-          <a href='lookbook' className='text-[#ffcc00]'>LOOKBOOK</a>
+          <a href='/home' className='text-[#ffcc00]'>LOOKBOOK</a>
         </div>
         <div className="header-middle hidden md:block">
           <a href='home' className='text-2xl text-[#ffcc00]  md:text-4xl font-medium'>Solve</a>

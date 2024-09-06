@@ -6,7 +6,6 @@ import Oslo from './pages/Oslo';
 import Lisbon from './pages/Lisbon';
 import Berlin from './pages/Berlin';
 import Madrid from './pages/Madrid';
-import Lookbook from './pages/LookBook';
 import Loading from './pages/Loading';
 const App = () => {
   return (
@@ -19,8 +18,6 @@ const App = () => {
         <Route path="/lisbon" element={<Lisbon />} />
         <Route path="/berlin" element={<Berlin />} />
         <Route path="/madrid" element={<Madrid />} />
-        <Route path="/lookbook" element={<Lookbook />
-} />
       </Routes>
     </Router>
   );
