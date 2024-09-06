@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import oslo from '../images/oslo.png';
 import oslo2 from '../images/oslo2.png';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Oslo = () => {
   const textVariants = {
@@ -17,6 +19,7 @@ const Oslo = () => {
 
   return (
     <>
+    <Navbar/>
       <motion.div
         className="oslo bg-[#f5f5f5] pt-32 flex items-start flex-col gap-20"
         initial="hidden"
@@ -103,6 +106,7 @@ const Oslo = () => {
           whileHover={{ scale: 0.5 }}
         />
       </motion.a>
+      <Footer/>
     </>
   );
 };

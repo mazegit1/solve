@@ -11,10 +11,13 @@ import room3 from '../images/room3.png'
 import store1 from '../images/store1.png'
 import store2 from '../images/store2.png'
 import { motion } from 'framer-motion';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
     <>
+<Navbar/>
      <div
         className="hero py-[100px] md:py-[150px] lg:py-[250px] h-[100vh] flex flex-col justify-center items-center bg-cover bg-center"
         style={{ backgroundImage: `url(${background})` }}
@@ -148,6 +151,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

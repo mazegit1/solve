@@ -9,23 +9,20 @@ import Lisbon from './pages/Lisbon';
 import Berlin from './pages/Berlin';
 import Madrid from './pages/Madrid';
 import Lookbook from './pages/Lookbook';
-import Help from './pages/Help';
-
+import Loading from './pages/Loading';
 const App = () => {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Loading />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/oslo" element={<Oslo />} />
         <Route path="/lisbon" element={<Lisbon />} />
         <Route path="/berlin" element={<Berlin />} />
         <Route path="/madrid" element={<Madrid />} />
         <Route path="/lookbook" element={<Lookbook />} />
-        <Route path="/help" element={<Help />} />
       </Routes>
-      <Footer />
     </Router>
   );
 };

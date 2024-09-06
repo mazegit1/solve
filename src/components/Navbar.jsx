@@ -17,7 +17,7 @@ const Navbar = () => {
           <a href='lookbook' className='text-[#ffcc00]'>LOOKBOOK</a>
         </div>
         <div className="header-middle hidden md:block">
-          <a href='/' className='text-2xl text-[#ffcc00]  md:text-4xl font-medium'>Solve</a>
+          <a href='home' className='text-2xl text-[#ffcc00]  md:text-4xl font-medium'>Solve</a>
         </div>
         <div className="header-right hidden md:flex items-center gap-8">
           <div className="wrapper">

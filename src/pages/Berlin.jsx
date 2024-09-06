@@ -17,6 +17,8 @@ const Berlin = () => {
 
   return (
     <>
+       <Navbar />
+
       <motion.div
         className="oslo bg-[#f5f5f5] pt-32 flex items-start flex-col gap-20"
         initial="hidden"
@@ -103,6 +105,8 @@ const Berlin = () => {
           whileHover={{ scale: 0.5 }}
         />
       </motion.a>
+      <Footer />
+
     </>
   );
 };

@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import lookbook from '../images/lookbook.png';
+import Navbar from '../components/Navbar';
 
 const LookBook = () => {
   return (
     <>
+    <Navbar/>
       <div className="lookbook py-16 flex flex-col lg:flex-row items-center lg:justify-between gap-12 px-6 lg:px-12">
         <motion.div 
           className="lookbook-left w-full lg:w-1/2" 
@@ -63,6 +65,7 @@ const LookBook = () => {
           </motion.div>
         </motion.div>
       </div>
+      <Footer/>
     </>
   );
 };

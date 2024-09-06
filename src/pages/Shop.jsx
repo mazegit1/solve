@@ -5,9 +5,12 @@ import featurecard3 from '../images/card3.png'
 import featurecard4 from '../images/card4.png'
 import featurecard5 from '../images/card5.png'
 import featurecard6 from '../images/card6.png'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 const Shop = () => {
   return (
   <>
+  <Navbar/>
   <div className="shop bg-[#cbcbcb] py-44 px-20">
     <div className="shop-top">
       <h1 className='text-[#FFCC00] text-center text-9xl'>SHOP</h1>
@@ -55,7 +58,7 @@ const Shop = () => {
       </div>
    
   </div>
-  
+  <Footer/>
   </>
   )
 }
