@@ -1,0 +1,32 @@
+/* index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Light gray background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border: #ffcc00; /* Dark gray background for the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Slightly lighter gray when hovered */
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #ffcc00; /* Yellow color when actively scrolling */
+}
