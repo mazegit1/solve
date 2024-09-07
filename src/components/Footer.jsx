@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   return (
     <motion.div
-      className="footer bg-[#e3e3e3] flex flex-col items-center px-4 py-8 text-start gap-14 border-t border-t-gray-500"
+      className="footer bg-[#e3e3e3] flex flex-col items-center px-4 py-14   text-start  border-t border-t-gray-500"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

@@ -33,7 +33,7 @@ const Berlin = () => {
             animate="visible"
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Berlin
+            Madrid
           </motion.h1>
           <p className="text-gray-600 text-lg md:text-xl leading-6 md:leading-8 mt-4 md:mt-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellendus alias quia nam,
