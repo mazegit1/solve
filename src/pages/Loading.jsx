@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import enterimg from '../images/Enter.png';
 
 const Loading = () => {
   return (
@@ -15,10 +14,11 @@ const Loading = () => {
       />
       <motion.a
         href='home'
-        className="relative px-8 py-8 md:px-12 md:py-12 xl:text-8xl md:text-6xl text-4xl text-white border-4 border-white hover:text-[#ffb700] hover:border-[#ffb700] transition-all ease-in-out duration-300 hover:bg-black bg-transparent text-center rounded-full shadow-lg"
+        className="relative  px-8 py-8 md:px-12 md:py-12 xl:text-8xl md:text-6xl text-4xl text-white border-4 border-white hover:text-[#ffb700] hover:border-[#ffb700] transition-all ease-in-out duration-300 hover:bg-black bg-transparent text-center rounded-full shadow-lg"
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.1, rotate: 5 }}
         transition={{ duration: 0.3 }}
+
       >
         PRESS TO ENTER
       </motion.a>
