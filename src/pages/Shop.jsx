@@ -1,66 +1,104 @@
-import React from 'react'
-import featurecard from '../images/card.png'
-import featurecard2 from '../images/card2.png'
-import featurecard3 from '../images/card3.png'
-import featurecard4 from '../images/card4.png'
-import featurecard5 from '../images/card5.png'
-import featurecard6 from '../images/card6.png'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaSearch } from 'react-icons/fa';
+import featurecard from '../images/card.png';
+import featurecard2 from '../images/card2.png';
+import featurecard3 from '../images/card3.png';
+import featurecard4 from '../images/card4.png';
+import featurecard5 from '../images/card5.png';
+import featurecard6 from '../images/card6.png';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
+const products = [
+  { id: 1, name: 'Modern Chair', image: featurecard, price: '$199.00 USD' },
+  { id: 2, name: 'Modern Chair', image: featurecard2, price: '$199.00 USD' },
+  { id: 3, name: 'Modern Chair', image: featurecard3, price: '$199.00 USD' },
+  { id: 4, name: 'Modern Chair', image: featurecard4, price: '$199.00 USD' },
+  { id: 5, name: 'Modern Chair', image: featurecard5, price: '$199.00 USD' },
+  { id: 6, name: 'Modern Chair', image: featurecard6, price: '$199.00 USD' },
+];
+
 const Shop = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-  <>
-  <Navbar/>
-  <div className="shop bg-[#cbcbcb] py-44 px-20">
-    <div className="shop-top">
-      <h1 className='text-[#FFCC00] text-center text-9xl'>SHOP</h1>
-    </div>
-    <hr className='h-[2px] my-4 bg-white' />
-    <div className="wrapper justify-center flex items-center gap-6 text-center text-3xl">
-    <h3 className='text-3xl text-gray-600'>SOFA</h3>
-    <h3 className='text-3xl text-gray-600'>LAMP</h3>
-    <h3 className='text-3xl text-gray-600'>CHAIR</h3>
-    </div>
-    <hr className='h-[2px] my-4 bg-white'/>
-    <div className="shop-bottom bg-[#cbcbcb] py-12  flex flex-col items-center gap-20">
-        <div className="feature-bottom grid xl:grid-cols-3 xl:grid-rows-2 md:grid-rows-3 md:grid-cols-2 grid-rows-6   gap-14 justify-center items-center ">
-        <div className="card">
-          <img src={featurecard} className='rounded-[250px] overflow-hidden' />
-          <h1 className='text-center pt-6 text-4xl'>Modern Chair</h1>
-          <p className='text-gray-700 text-center text-2xl'>$199.00 USD</p>
+    <>
+      <Navbar className="navbar-text-black" />
+      <div className="shop bg-[#c3c3c3] py-56 px-6 md:px-20">
+        <motion.div
+          className="shop-top"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <h1 className="text-[#000000] text-center text-6xl md:text-9xl font-bold">
+            SHOP
+          </h1>
+        </motion.div>
+
+        <div className="search-bar flex justify-center my-8">
+          <motion.div
+            className="relative flex items-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={handleSearch}
+              placeholder="Search for products..."
+              className="bg-[#333] text-3xl text-white w-full md:w-[800px] px-8 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#ffffff]"
+            />
+            <FaSearch className="absolute right-4 text-[#FFD700] text-3xl" />
+          </motion.div>
         </div>
-        <div className="card">
-          <img src={featurecard2} className='rounded-[250px] overflow-hidden' />
-          <h1 className='text-center pt-6 text-4xl'>Elegant Lamp</h1>
-          <p className='text-gray-700 text-center text-2xl'>$199.00 USD</p>
+
+        <div className="wrapper py-14 flex justify-center gap-6 text-center text-xl md:text-6xl text-[#000000]">
+          <a href='shop' className="hover:text-[#FFf] transition-colors duration-300 cursor-pointer">
+            SOFA
+          </a>
+          <a href='shop' className="hover:text-[#FFf] transition-colors duration-300 cursor-pointer">
+            LAMP
+          </a>
+          <a href='shop' className="hover:text-[#FFf] transition-colors duration-300 cursor-pointer">
+            CHAIR
+          </a>
         </div>
-        <div className="card">
-          <img src={featurecard3} className='rounded-[250px] overflow-hidden' />
-          <h1 className='text-center pt-6 text-4xl'>Black Chair</h1>
-          <p className='text-gray-700 text-center text-2xl'>$199.00 USD</p>
-        </div>
-        <div className="card">
-          <img src={featurecard4} className='rounded-[250px] overflow-hidden' />
-          <h1 className='text-center pt-6 text-4xl'>LISBON SOFA</h1>
-          <p className='text-gray-700 text-center text-2xl'>$699.00 USD</p>
-        </div>
-        <div className="card">
-          <img src={featurecard5} className='rounded-[250px] overflow-hidden' />
-          <h1 className='text-center pt-6 text-4xl'>RETRO CHAIR</h1>
-          <p className='text-gray-700 text-center text-2xl'>$149.00 USD</p>
-        </div>
-        <div className="card">
-          <img src={featurecard6} className='rounded-[250px] overflow-hidden' />
-          <h1 className='text-center pt-6 text-4xl'>BLACK CHAIR</h1>
-          <p className='text-gray-700 text-center text-2xl'>$1099.00 USD</p>
-        </div>
+
+        <div className="shop-bottom bg-black rounded-3xl py-12 flex flex-col items-center gap-20">
+          <motion.div
+            className="grid xl:grid-cols-3 xl:grid-rows-2 md:grid-rows-3 md:grid-cols-2 grid-rows-6 gap-14 justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            {filteredProducts.map(product => (
+              <motion.div
+                className="card bg-[#1F1F1F] hover:text-black hover:bg-[#D4AF37] rounded-[30px] p-4"
+                key={product.id}
+                whileHover={{ scale: 1.05 }}
+              >
+                <img src={product.image} className="rounded-[250px] overflow-hidden w-full" alt={product.name} />
+                <h1 className="text-center pt-6 text-3xl md:text-4xl text-white hover:text-black">{product.name}</h1>
+                <p className="text-[#868686] text-center text-xl md:text-2xl">{product.price}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
-   
-  </div>
-  <Footer/>
-  </>
-  )
-}
+      <Footer />
+    </>
+  );
+};
 
-export default Shop
+export default Shop;
