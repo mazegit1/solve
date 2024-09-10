@@ -11,12 +11,12 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const products = [
-  { id: 1, name: 'Modern Chair', image: featurecard, price: '$199.00 USD' },
-  { id: 2, name: 'Modern Chair', image: featurecard2, price: '$199.00 USD' },
-  { id: 3, name: 'Modern Chair', image: featurecard3, price: '$199.00 USD' },
-  { id: 4, name: 'Modern Chair', image: featurecard4, price: '$199.00 USD' },
-  { id: 5, name: 'Modern Chair', image: featurecard5, price: '$199.00 USD' },
-  { id: 6, name: 'Modern Chair', image: featurecard6, price: '$199.00 USD' },
+  { id: 1, name: 'Modern Eames Chair', image: featurecard, price: '$199.00 USD' },
+  { id: 2, name: 'Elegant Lamp', image: featurecard2, price: '$199.00 USD' },
+  { id: 3, name: 'Black Chair', image: featurecard3, price: '$199.00 USD' },
+  { id: 4, name: 'Lisbon Sofa', image: featurecard4, price: '$199.00 USD' },
+  { id: 5, name: 'Retro Chair', image: featurecard5, price: '$199.00 USD' },
+  { id: 6, name: 'Black Wingback', image: featurecard6, price: '$199.00 USD' },
 ];
 
 const Shop = () => {
