@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { useCart } from '../contexts/CartContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { cartItems } = useCart(); // Get cart items from context
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -47,7 +49,7 @@ const Navbar = () => {
           </motion.div>
           <motion.div className="wrapper flex items-center gap-1">
             <a href='shop' className='text-[#ffcc00]'>CART</a>
-            <h1 className='bg-[#ffcc00] text-white w-8 pt-[2px] text-center h-10 rounded-full'>0</h1>
+            <h1 className='bg-[#ffcc00] text-white w-8 pt-[2px] text-center h-10 rounded-full'>{cartItems.length}</h1>
           </motion.div>
           <motion.div className="wrapper cursor-pointer" onClick={toggleMenu}>
             {isMenuOpen ? <IoClose size={40} className='text-[#ffcc00]'/> : <HiMenuAlt3 size={40} className='text-[#ffcc00]'/>}
