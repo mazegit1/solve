@@ -57,7 +57,7 @@ const Shop = () => {
               value={searchTerm}
               onChange={handleSearch}
               placeholder="Search for products..."
-              className="bg-[#333] text-3xl text-white w-full md:w-[800px] px-8 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#ffffff]"
+              className="bg-[#000000] text-3xl text-white w-full md:w-[800px] px-8 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#ffffff]"
             />
             <FaSearch className="absolute right-4 text-[#FFD700] text-3xl" />
           </motion.div>
@@ -75,7 +75,7 @@ const Shop = () => {
           </a>
         </div>
 
-        <div className="shop-bottom bg-black rounded-3xl py-12 flex flex-col items-center gap-20">
+        <div className="shop-bottom bg-gray-[#C3C3C3] rounded-3xl py-12 flex flex-col items-center gap-20">
           <motion.div
             className="grid xl:grid-cols-3 xl:grid-rows-2 md:grid-rows-3 md:grid-cols-2 grid-rows-6 gap-14 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}

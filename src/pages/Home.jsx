@@ -125,16 +125,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur amet at venia
         <motion.h1 className='text-[100px] md:text-[180px] lg:text-[250px] leading-[100px] md:leading-[150px]' variants={fadeInUp}>
           Rooms
         </motion.h1>
-        <motion.div className="wrapper text-center text-yellow-700 text-[40px] md:text-[50px]" variants={fadeInUp}>
+        <motion.a href='shop' className="wrapper flex items-center gap-2 text-center text-yellow-700 text-[40px] md:text-[50px]" variants={fadeInUp}>
           <h2>SEE ALL</h2>
           <HiOutlineArrowNarrowRight />
-        </motion.div>
+        </motion.a>
 
         <motion.div
           className="rooms-bottom flex flex-col md:flex-row gap-6 xl:gap-14 justify-center items-center mt-8"
         >
           {[room1, room2, room3].map((room, index) => (
-            <motion.div
+            <motion.a
+            href='shop'
               className="card"
               key={index}
               initial={{ opacity: 0, x: 100 * (index % 2 === 0 ? 1 : -1) }}
@@ -143,7 +144,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur amet at venia
               viewport={{ once: true }}
             >
               <img src={room} className='rounded-full overflow-hidden' alt="" />
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
       </motion.div>
