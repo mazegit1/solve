@@ -9,7 +9,6 @@ import featurecard5 from '../images/card5.png';
 import featurecard6 from '../images/card6.png';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { useCart } from '../contexts/CartContext';
 
 const products = [
   { id: 1, name: 'Modern Eames Chair', image: featurecard, price: '$199.00 USD' },
@@ -22,7 +21,6 @@ const products = [
 
 const Shop = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const { addToCart } = useCart();
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -31,10 +29,6 @@ const Shop = () => {
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const handleAddToCart = (product) => {
-    addToCart(product);
-  };
 
   return (
     <>
@@ -62,32 +56,51 @@ const Shop = () => {
               type="text"
               value={searchTerm}
               onChange={handleSearch}
-              placeholder="Search"
-              className="bg-white border-none rounded-full py-2 px-6 pr-12 text-gray-700 placeholder-gray-400"
+              placeholder="Search for products..."
+              className="bg-[#000000] text-3xl text-white w-full md:w-[800px] px-8 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#ffffff]"
             />
-            <FaSearch className="absolute right-4 text-gray-500" />
+            <FaSearch className="absolute right-4 text-[#FFD700] text-3xl" />
           </motion.div>
         </div>
 
-        <motion.div
-          className="product-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {filteredProducts.map(product => (
-            <motion.div
-              key={product.id}
-              className="card border rounded-lg p-4 bg-white shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              onClick={() => handleAddToCart(product)}
-            >
-              <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4 rounded" />
-              <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-              <p className="text-lg text-gray-600">{product.price}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="wrapper py-14 flex justify-center gap-6 text-center text-xl md:text-6xl text-[#000000]">
+          <a href='shop' className="hover:text-[#FFf] transition-colors duration-300 text-4xl xl:text-6xl cursor-pointer">
+            SOFA
+          </a>
+          <a href='shop' className="hover:text-[#FFf] transition-colors duration-300 text-4xl xl:text-6xl cursor-pointer">
+            LAMP
+          </a>
+          <a href='shop' className="hover:text-[#FFf] transition-colors duration-300 text-4xl xl:text-6xl cursor-pointer">
+            CHAIR
+          </a>
+        </div>
+
+        <div className="shop-bottom bg-gray-[#C3C3C3] rounded-3xl py-12 flex flex-col items-center gap-20">
+          <motion.div
+            className="grid xl:grid-cols-3 xl:grid-rows-2 md:grid-rows-3 md:grid-cols-2 grid-rows-6 gap-14 justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map(product => (
+                <motion.div
+                  className="card bg-[#1F1F1F] rounded-[30px] p-4"
+                  key={product.id}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <img src={product.image} className="rounded-[250px] overflow-hidden w-full" alt={product.name} />
+                  <h1 className="text-center pt-6 text-3xl md:text-4xl text-white hover:text-black">{product.name}</h1>
+                  <p className="text-[#868686] text-center text-xl md:text-2xl">{product.price}</p>
+                </motion.div>
+              ))
+            ) : (
+              <div className="text-center items-center justify-center text-xl md:text-5xl bg-black rounded-xl px-6 py-3 text-red-600">
+                This item is not found
+              </div>
+            )}
+          </motion.div>
+        </div>
       </div>
       <Footer />
     </>
